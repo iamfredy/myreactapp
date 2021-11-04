@@ -1,0 +1,23 @@
+.m20pc {
+    margin: 20%;
+}
+
+.m20pcl {
+    margin-left: 20%;
+}
+
+.m20pcr {
+    margin-right: 20%;
+}
+.m5pcb {
+    margin-block: 5%;
+}
+.mvThumbImg{
+    max-width: 20%;
+    max-height: 20%;
+}
+.langBadge{
+    background-color: #e9ecef;
+    color: blue;
+    margin-right: 1%;
+}
