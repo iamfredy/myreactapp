@@ -3,14 +3,14 @@
 }
 
 .m20pcl {
-    margin-left: 20%;
+    margin-left: 30%;
 }
 
 .m20pcr {
-    margin-right: 20%;
+    margin-right: 30%;
 }
 .m5pcb {
-    margin-block: 5%;
+    margin-block:2%;
 }
 .mvThumbImg{
     max-width: 20%;
@@ -20,4 +20,7 @@
     background-color: #e9ecef;
     color: blue;
     margin-right: 1%;
+}
+.cardShadow{
+    box-shadow:-2px 7px 36px 13px #bbc5cd;
 }

@@ -1,11 +1,13 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import cssC from '../css/MovieCard.module.css'
+import Card from './Card';
 
 export default function MovieCard(props) {
     const data=props.data;
     return (
-        <div className={"card "+cssC.m20pcl+" "+cssC.m20pcr+" "+cssC.m20pcb}>
+
+        <Card>
             <img class={"card-img-top "+cssC.mvThumbImg} src={data.img_url} alt={data.title}/>
             <div className="card-body">
                 <h5 className="card-title">{data.title}</h5>
@@ -22,6 +24,6 @@ export default function MovieCard(props) {
                     </li>
                 </ul>                
             </div>
-        </div>
+        </Card>
     )
 }
