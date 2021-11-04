@@ -1,8 +1,8 @@
 import { Route,Switch } from "react-router-dom";
 import MainNavigation from "./components/layouts/MainNavigation";
-import AllMeetUpsPage from "./pages/AllMeetUps";
+import AllMoviesPage from "./pages/AllMovies";
 import FavouritesPage from "./pages/Favourites";
-import NewMeetupPage from "./pages/NewMeetup";
+import AddNewMoviePage from "./pages/NewMovie";
 
 function App() {
   return (
@@ -10,16 +10,16 @@ function App() {
       <MainNavigation/>
       <Switch>
       <Route path="/" exact>
-        <AllMeetUpsPage/>
+        <AllMoviesPage/>
       </Route>
-      <Route path="/NewMeetup">
-        <NewMeetupPage/>
+      <Route path="/NewMovie">
+        <AddNewMoviePage/>
       </Route>
       <Route path="/Favourites">
         <FavouritesPage/>
       </Route>
-      <Route path="/AllMeetUps">
-        <AllMeetUpsPage/>
+      <Route path="/AllMovies">
+        <AllMoviesPage/>
       </Route>
       </Switch>
     </div>

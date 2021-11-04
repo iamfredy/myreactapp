@@ -4527,7 +4527,7 @@ const MOVIES_DATA=[
     "imdb_url": "https://www.imdb.com/title/tt0093693/"
   }
 ]
-export default function AllMeetUpsPage() {
+export default function AllMoviesPage() {
     return (
         <div>
             <h1>All Movies</h1>
