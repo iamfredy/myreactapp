@@ -2,14 +2,14 @@
     margin: 20%;
 }
 
-.m20pcl {
+.m30pcl {
     margin-left: 30%;
 }
 
-.m20pcr {
+.m30pcr {
     margin-right: 30%;
 }
-.m5pcb {
+.m2pcb {
     margin-block:2%;
 }
 .mvThumbImg{
@@ -23,4 +23,7 @@
 }
 .cardShadow{
     box-shadow:-2px 7px 36px 13px #bbc5cd;
+}
+.pd5{
+    padding: 5%;
 }

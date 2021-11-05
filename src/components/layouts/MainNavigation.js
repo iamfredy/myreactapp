@@ -13,9 +13,9 @@ export default function MainNavigation() {
             <Navbar expand="lg">
                 <Navbar.Brand> <Link className={cssClasses.nav+" navbar-brand"} to="/">Home</Link></Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link><Link className={cssClasses.nav+" navbar-brand"} to="/AllMovies">All Movies</Link></Nav.Link>
-                    <Nav.Link><Link className={cssClasses.nav+" navbar-brand"} to="/NewMovie">New Movie</Link></Nav.Link>
-                    <Nav.Link><Link className={cssClasses.nav+" navbar-brand"} to="/Favourites">Favourites</Link></Nav.Link>                    
+                    <Link className={cssClasses.nav+" navbar-brand"} to="/AllMovies">All Movies</Link>
+                    <Link className={cssClasses.nav+" navbar-brand"} to="/NewMovie">New Movie</Link>
+                    <Link className={cssClasses.nav+" navbar-brand"} to="/Favourites">Favourites</Link>                    
                 </Nav>
             </Navbar>
         </div>

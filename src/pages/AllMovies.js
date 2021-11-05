@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieCard from '../components/MovieCard';
+import MovieCard from '../components/movies/MovieCard';
 
 const MOVIES_DATA=[
   {
@@ -4533,7 +4533,7 @@ export default function AllMoviesPage() {
             <h1>All Movies</h1>
             {MOVIES_DATA.map((movie)=>{
                 // return <MovieCard props={movie}></MovieCard>
-                return <MovieCard data={movie}></MovieCard>
+                return <MovieCard key={movie.title} data={movie}></MovieCard>
             })}
         </div>
     )
