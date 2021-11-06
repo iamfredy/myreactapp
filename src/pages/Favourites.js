@@ -1,9 +1,10 @@
 import React from 'react'
+import backgroundImg from '../images/favourites.jpg'
 
 export default function FavouritesPage() {
     return (
-        <div>
-            <h1>Faourites Page</h1>
+        <div className="favDiv">
+            <h1 className="glassEffect">Faourites Page</h1>
         </div>
     )
 }

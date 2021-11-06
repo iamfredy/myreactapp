@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.loadingSpinner{
+  margin-left: 24%;
+  margin-top: 10%!important;
+}
+.txtAlnCenter{
+  text-align: center;
+}
+
+.glassEffect{
+  background-color: #ffffff10!important;
+  backdrop-filter: blur(5px)!important;
+  -webkit-backdrop-filter: blur(12px)!important;
+}
+
+.favDiv{
+  background-image: url('./images/favourites.jpg');
+  width: 1024px;
+  height: 720px;
+}
+.defaultBg{
+  background-image: url('./images/defaultBg.jpg');
+  height: auto;
+}

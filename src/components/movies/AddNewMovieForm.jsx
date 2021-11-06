@@ -10,18 +10,21 @@ export default function AddNewMovieForm(props) {
     const movieYearRef=useRef();
     const movieRatingRef=useRef();
     const movieLanguageRef=useRef();
+    const moviePosterURLRef=useRef();
+
 
 
     const submitHandler=(event)=>{
         event.preventDefault();
-        const titleInput=titleInputRef.current.value;
-        const movieDesc=movieDescRef.current.value;
-        const movieYear=movieYearRef.current.value;
-        const movieRating=movieRatingRef.current.value;
-        const movieLanguage=movieLanguageRef.current.value;
+        const title=titleInputRef.current.value;
+        const description=movieDescRef.current.value;
+        const year=movieYearRef.current.value;
+        const rating=movieRatingRef.current.value;
+        const languages=movieLanguageRef.current.value.split(",");
+        const posterURL=moviePosterURLRef.current.value;
 
-        const movieData={titleInput,movieDesc,movieYear,movieRating,movieLanguage};
-        console.log(movieData);
+        const movieData={title,description,year,rating,languages,posterURL};
+        props.saveMovieData(movieData);
     }
     return (
         <Card>
@@ -35,6 +38,10 @@ export default function AddNewMovieForm(props) {
                 <Form.Label>Movie Description</Form.Label>
                 <Form.Control as="textarea" placeholder="Enter Movie Description" ref={movieDescRef}/>
             </Form.Group>
+            <Form.Group className="mb-3" controlId="formMovieURL">
+                <Form.Label>Movie Poster URL</Form.Label>
+                <Form.Control as="textarea" placeholder="Enter Movie Poster URL" ref={moviePosterURLRef}/>
+            </Form.Group>            
             <Form.Group className="mb-3" controlId="formMovieYear">
                 <Form.Label>Movie Year</Form.Label>
                 <Form.Control type="number" placeholder="Enter Year of Release" ref={movieYearRef}/>
@@ -47,7 +54,7 @@ export default function AddNewMovieForm(props) {
                 <Form.Label>Movie Languages</Form.Label>
                 <Form.Control type="text" placeholder="Enter Movie Languages" ref={movieLanguageRef} />
             </Form.Group>
-            <Button variant="primary" type="submit" onClick={()=>{console.log("Hello");}}>Save</Button>
+            <Button variant="primary" type="submit" >Save</Button>
         </Form>
     </Card>
     )
