@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import cssC from '../../css/MovieCard.module.css'
 import Card from '../Card';
 import imgNotFound from '../../images/image_not_found.png';
+import Button from 'react-bootstrap/Button';
 
 export default function MovieCard(props) {
     const data=props.data;
+    console.log("AllMoviesPage props Start");
+    console.log(data.removeFromFav);
+    console.log("AllMoviesPage props End");
     // const movieData={title,description,year,rating,languages,posterURL};
-    
+    const [showFavButton, setstate] = useState(data.favButton);
+    const toggleFavButton=()=>{
+        if(showFavButton){
+            data.addToFav(data.key);
+        }
+        else{
+            data.removeFromFav(data.key);
+        }
+        setstate(!showFavButton);
+    }
+
     return (
         
         <Card>
@@ -27,6 +41,7 @@ export default function MovieCard(props) {
                     </li>
                 </ul>                
             </div>
+            {<Button className={showFavButton?"btn-primary":"btn-secondary"} onClick={toggleFavButton} >{showFavButton?"Add to":"Remove from"} Favourites </Button>}
         </Card>
     )
 }

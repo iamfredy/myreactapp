@@ -4,7 +4,7 @@ import MovieCard from '../components/movies/MovieCard';
 import { useState,useEffect } from 'react';
 import PageLoading from '../components/PageLoading';
 
-export default function AllMoviesPage() {
+export default function AllMoviesPage(props) {
   const [loadedMovies,setLoadedMovies]=useState([]);
   const [isPageLoading,setPageLoading]=useState(true);
 
@@ -41,7 +41,10 @@ export default function AllMoviesPage() {
             <h1>All Movies</h1>
             {loadedMovies.map((movie)=>{
                 // return <MovieCard props={movie}></MovieCard>
-                return <MovieCard key={movie.title} data={movie}></MovieCard>
+                movie.favButton=true;
+                movie.removeFromFav=props.removeFromFav;
+                movie.addToFav=props.addToFav;
+                return <MovieCard key={movie.key} data={movie}></MovieCard>
             })}
         </div>
       )

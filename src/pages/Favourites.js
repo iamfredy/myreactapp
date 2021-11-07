@@ -1,5 +1,4 @@
 import React from 'react'
-import backgroundImg from '../images/favourites.jpg'
 
 export default function FavouritesPage() {
     return (
