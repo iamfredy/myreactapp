@@ -29,7 +29,7 @@ function App() {
         <AllMoviesPage removeFromFav={removeFromFav} addToFav={addToFav}/>
       </Route>
       <Route path="/myreactapp" exact>
-        <AllMoviesPage/>
+        <AllMoviesPage removeFromFav={removeFromFav} addToFav={addToFav}/>
       </Route>
       <Route path="/NewMovie">
         <AddNewMoviePage/>
